@@ -1,5 +1,5 @@
 #! /bin/bash
-for f in ls /mnt/data/Mockingbird\ Videos//2008/BRU/CS84/*Y;
+for f in ls `pwd`;
 do
 s=${f##*/}
 ffmpeg -loglevel quiet -i "${f%%.*}".wmv "${s%%.*}".wav < /dev/null;
